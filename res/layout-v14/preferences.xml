@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <LinearLayout 
+        android:orientation="vertical"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/pref_hiscore" />
+    
+        <include layout="@layout/pref_theme" />
+    
+        <include layout="@layout/pref_sound" />
+        <Switch
+            android:id="@+id/checkbox_sound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkbox_sound"
+            android:layout_gravity="center_horizontal" />
+        
+        <include layout="@layout/pref_support" />
+        
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.silo.games.memory.kids"
+    android:installLocation="auto"
+    android:versionCode="18"
+    android:versionName="2.0.1" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:logo="@drawable/logo" >
+        <activity
+            android:name="org.androidsoft.games.memory.kids.ui.MainActivity"
+            android:label="@string/activity_title" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="org.androidsoft.games.memory.kids.ui.CreditsActivity"
+            android:label="@string/activity_title" >
+        </activity>
+        <activity
+            android:name="org.androidsoft.games.memory.kids.ui.PreferencesActivity"
+            android:label="@string/activity_title" >
+        </activity>
+    </application>
+
+</manifest>
