@@ -34,7 +34,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import org.androidsoft.games.memory.kids.Constants;
 import org.androidsoft.games.memory.kids.PreferencesService;
-import org.silo.games.memory.kids.R;
+import org.fairket.app.memory.kids.R;
 import org.androidsoft.games.memory.kids.Rotate3dAnimation;
 import org.androidsoft.utils.sound.SoundManager;
 

@@ -24,7 +24,7 @@ import android.view.View;
 import java.text.MessageFormat;
 
 import org.androidsoft.games.memory.kids.PreferencesService;
-import org.silo.games.memory.kids.R;
+import org.fairket.app.memory.kids.R;
 
 import com.fairket.sdk.android.FairketApiClient;
 import com.fairket.sdk.android.FairketHelperForGingerbread;
@@ -38,7 +38,7 @@ public class MainActivity extends AbstractMainActivity implements
 		Memory.OnMemoryListener {
 
 	public static final String FAIRKET_LOG_TAG = "FairketKidsMemory";
-	public static final String FAIRKET_APP_PUBLIC_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4jTfMl9cQpRMp/gUlq1nM7/oCt1BtOOfb77bvVrnqxuuDTcYxSikX6+/u/ehvd6FvINepIfoLurpwB6gi+U4L2Nn8J8b40+eJjWS0fqAi+CDX4tBCvJv9wcr2DzygIHriteZ0slQLLMOEnuNvAjfSsb5P4u9zWSgh50S4Xw2Uvt78LaFhGkB3AMEi2zBAS3+XF5TGKl8flRXjpzJ76s7Ov3JkfJyfJQSAt9QBicZBBJyPn7MoGplyz5E1ArY3ye3Tq40lgXfj4lMS/U+ZR8p5GrPyCzt5qhFVAzKAlt+poCg9s1PVJVhOhtPC84KZQ37ABvOAv3ev+XWVSxo/cQn7wIDAQAB";
+	public static final String FAIRKET_APP_PUBLIC_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjtsuPFU4uiH+cz1ApG/2B44QG9eF0lo84g7imInDgo1WHESEXMiqkDZBmnVSx2sPz0tr4EeJSLCo9jbvZGIrtY+qCDbi/hmt32pP4JzEqkWn3rIoatQhSLOPGxNFmacjTmuj2pDDWE69bLQFy1nCDnxKk0Lij1hfPaXvWnmveZOcaFgCybQGV6mtI+NV8kOommqAFICXjrNKDKKyQM3GrZU4XWgC8ySmyXMQIfbMbI1JKZpIeleisBTFVlc270S2ZGlMRBByGjiD8OIAhxkVSS1AVoIHiqmTj6pXfOjMMjtf4BZVBQUEPxZWGj588HzwfskSO12kPwgHadUS6KNCJwIDAQAB";
 
 	private static final int[] tiles_default = { R.drawable.default_1,
 			R.drawable.default_2, R.drawable.default_3, R.drawable.default_4,

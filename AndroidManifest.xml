@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.silo.games.memory.kids"
+    package="org.fairket.app.memory.kids"
     android:installLocation="auto"
     android:versionCode="18"
     android:versionName="2.0.1" >

@@ -19,7 +19,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 
-import org.silo.games.memory.kids.R;
+import org.fairket.app.memory.kids.R;
 import org.androidsoft.utils.credits.CreditsParams;
 import org.androidsoft.utils.credits.CreditsView;
 import org.androidsoft.utils.ui.BasicActivity;
