@@ -1,4 +1,5 @@
 androidsoft-kids-memory
 =======================
 
-Kids memory game metered with Fairket 
+Kids memory game metered with Fairket
+ 
