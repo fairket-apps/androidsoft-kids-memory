@@ -18,7 +18,7 @@ import android.content.SharedPreferences;
 import java.util.ArrayList;
 import java.util.List;
 import org.androidsoft.games.memory.kids.PreferencesService;
-import org.fairket.app.memory.kids.R;
+import com.fairket.app.memory.kids.R;
 import org.androidsoft.utils.sound.SoundManager;
 
 /**

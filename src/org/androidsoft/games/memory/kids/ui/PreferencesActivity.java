@@ -23,7 +23,7 @@ import android.widget.*;
 import android.widget.AdapterView.OnItemSelectedListener;
 
 import org.androidsoft.games.memory.kids.PreferencesService;
-import org.fairket.app.memory.kids.R;
+import com.fairket.app.memory.kids.R;
 import org.androidsoft.utils.ui.BasicActivity;
 
 import com.fairket.sdk.android.FairketApiClient;
