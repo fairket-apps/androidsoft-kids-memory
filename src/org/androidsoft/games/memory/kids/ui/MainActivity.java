@@ -27,7 +27,7 @@ import org.androidsoft.games.memory.kids.PreferencesService;
 import com.fairket.app.memory.kids.R;
 
 import com.fairket.sdk.android.FairketApiClient;
-import com.fairket.sdk.android.FairketHelperForGingerbread;
+import com.fairket.sdk.android.FairketAppTimeHelper;
 
 /**
  * MainActivity
@@ -40,8 +40,7 @@ public class MainActivity extends AbstractMainActivity implements
 	public static final String FAIRKET_LOG_TAG = "FairketKidsMemory";
 
 	// Integ app key
-	// public static final String FAIRKET_APP_PUBLIC_KEY =
-	// "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAssUd0bNodBrziReXb1J8djrsP6KCG2lxnnBZqgC38jrpnhHLsjxIvRE6/DpydwUyFrye58sSNzuxRg5rbemy7SThVL3stqeNMHNYDlicfaqSRfNsrrcSyN2tLYtzRtDpED6eH5WAGjDfFJ2GY+Qu7nST44epO2RaPBAKlcoVFLE+y6PKmxmGyXzkTOnI+9MDAbo6HJQ/EGbjERMF4B9PmYYWMoxfgkP5Zj91uHSLogVl93Pd8VTuhwia3p7RVsfJ1OatXSjo3MErzwq2tdjfzHhcup3EcOUAQy38uCLrpqqJFLRkeiulWVGP4uojMzD7mxeyvW3JLzW8GtClMt6/PwIDAQAB";
+//	public static final String FAIRKET_APP_PUBLIC_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAssUd0bNodBrziReXb1J8djrsP6KCG2lxnnBZqgC38jrpnhHLsjxIvRE6/DpydwUyFrye58sSNzuxRg5rbemy7SThVL3stqeNMHNYDlicfaqSRfNsrrcSyN2tLYtzRtDpED6eH5WAGjDfFJ2GY+Qu7nST44epO2RaPBAKlcoVFLE+y6PKmxmGyXzkTOnI+9MDAbo6HJQ/EGbjERMF4B9PmYYWMoxfgkP5Zj91uHSLogVl93Pd8VTuhwia3p7RVsfJ1OatXSjo3MErzwq2tdjfzHhcup3EcOUAQy38uCLrpqqJFLRkeiulWVGP4uojMzD7mxeyvW3JLzW8GtClMt6/PwIDAQAB";
 	// Prod app key
 	public static final String FAIRKET_APP_PUBLIC_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjtsuPFU4uiH+cz1ApG/2B44QG9eF0lo84g7imInDgo1WHESEXMiqkDZBmnVSx2sPz0tr4EeJSLCo9jbvZGIrtY+qCDbi/hmt32pP4JzEqkWn3rIoatQhSLOPGxNFmacjTmuj2pDDWE69bLQFy1nCDnxKk0Lij1hfPaXvWnmveZOcaFgCybQGV6mtI+NV8kOommqAFICXjrNKDKKyQM3GrZU4XWgC8ySmyXMQIfbMbI1JKZpIeleisBTFVlc270S2ZGlMRBByGjiD8OIAhxkVSS1AVoIHiqmTj6pXfOjMMjtf4BZVBQUEPxZWGj588HzwfskSO12kPwgHadUS6KNCJwIDAQAB";
 
@@ -119,7 +118,7 @@ public class MainActivity extends AbstractMainActivity implements
 
 		newGame();
 
-		mFairketApiClient = FairketHelperForGingerbread.onCreate(this,
+		mFairketApiClient = FairketAppTimeHelper.onCreate(this,
 				FAIRKET_APP_PUBLIC_KEY, FAIRKET_LOG_TAG);
 	}
 
@@ -174,7 +173,7 @@ public class MainActivity extends AbstractMainActivity implements
 
 		drawGrid();
 
-		FairketHelperForGingerbread.onResume(mFairketApiClient);
+		FairketAppTimeHelper.onResume(mFairketApiClient);
 
 	}
 
@@ -187,7 +186,7 @@ public class MainActivity extends AbstractMainActivity implements
 
 		mMemory.onPause(PreferencesService.instance().getPrefs(), mQuit);
 
-		FairketHelperForGingerbread.onPause(mFairketApiClient);
+		FairketAppTimeHelper.onPause(mFairketApiClient);
 
 	}
 
@@ -195,7 +194,7 @@ public class MainActivity extends AbstractMainActivity implements
 	protected void onDestroy() {
 		super.onDestroy();
 
-		FairketHelperForGingerbread.onDestroy(mFairketApiClient);
+		FairketAppTimeHelper.onDestroy(mFairketApiClient);
 	}
 
 	/**

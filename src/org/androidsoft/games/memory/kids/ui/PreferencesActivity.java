@@ -27,7 +27,7 @@ import com.fairket.app.memory.kids.R;
 import org.androidsoft.utils.ui.BasicActivity;
 
 import com.fairket.sdk.android.FairketApiClient;
-import com.fairket.sdk.android.FairketHelperForGingerbread;
+import com.fairket.sdk.android.FairketAppTimeHelper;
 
 /**
  *
@@ -88,7 +88,7 @@ public class PreferencesActivity extends BasicActivity implements OnClickListene
         mButtonSupport = (Button) findViewById(R.id.button_support);
         mButtonSupport.setOnClickListener(this);
         
-		mFaiirketApiClient = FairketHelperForGingerbread.onCreate(this,
+		mFaiirketApiClient = FairketAppTimeHelper.onCreate(this,
 				MainActivity.FAIRKET_APP_PUBLIC_KEY,
 				MainActivity.FAIRKET_LOG_TAG);
 
@@ -169,19 +169,19 @@ public class PreferencesActivity extends BasicActivity implements OnClickListene
 	protected void onResume() {
 		super.onResume();
 
-		FairketHelperForGingerbread.onResume(mFaiirketApiClient);
+		FairketAppTimeHelper.onResume(mFaiirketApiClient);
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-		FairketHelperForGingerbread.onPause(mFaiirketApiClient);
+		FairketAppTimeHelper.onPause(mFaiirketApiClient);
 	}
 
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		FairketHelperForGingerbread.onDestroy(mFaiirketApiClient);
+		FairketAppTimeHelper.onDestroy(mFaiirketApiClient);
 	}
 
 
