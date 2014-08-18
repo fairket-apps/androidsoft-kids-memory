@@ -2,12 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fairket.app.memory.kids"
     android:installLocation="auto"
-    android:versionCode="5"
-    android:versionName="1.0.2" >
+    android:versionCode="8"
+    android:versionName="1.0.3" >
 
     <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="19" />
+
+    <!-- GOOGLE IAP -->
+    <uses-permission android:name="com.android.vending.BILLING" />
 
     <application
         android:hardwareAccelerated="true"

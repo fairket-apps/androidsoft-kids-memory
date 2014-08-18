@@ -14,18 +14,16 @@
  */
 package org.androidsoft.games.memory.kids.ui;
 
+import java.text.MessageFormat;
+
+import org.androidsoft.games.memory.kids.PreferencesService;
 import org.androidsoft.games.memory.kids.model.Memory;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.test.suitebuilder.TestSuiteBuilder.FailedToCreateTests;
 import android.view.View;
 
-import java.text.MessageFormat;
-
-import org.androidsoft.games.memory.kids.PreferencesService;
 import com.fairket.app.memory.kids.R;
-
 import com.fairket.sdk.android.FairketApiClient;
 import com.fairket.sdk.android.FairketAppTimeHelper;
 
@@ -40,7 +38,7 @@ public class MainActivity extends AbstractMainActivity implements
 	public static final String FAIRKET_LOG_TAG = "FairketKidsMemory";
 
 	// Integ app key
-//	public static final String FAIRKET_APP_PUBLIC_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAssUd0bNodBrziReXb1J8djrsP6KCG2lxnnBZqgC38jrpnhHLsjxIvRE6/DpydwUyFrye58sSNzuxRg5rbemy7SThVL3stqeNMHNYDlicfaqSRfNsrrcSyN2tLYtzRtDpED6eH5WAGjDfFJ2GY+Qu7nST44epO2RaPBAKlcoVFLE+y6PKmxmGyXzkTOnI+9MDAbo6HJQ/EGbjERMF4B9PmYYWMoxfgkP5Zj91uHSLogVl93Pd8VTuhwia3p7RVsfJ1OatXSjo3MErzwq2tdjfzHhcup3EcOUAQy38uCLrpqqJFLRkeiulWVGP4uojMzD7mxeyvW3JLzW8GtClMt6/PwIDAQAB";
+	//public static final String FAIRKET_APP_PUBLIC_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAssUd0bNodBrziReXb1J8djrsP6KCG2lxnnBZqgC38jrpnhHLsjxIvRE6/DpydwUyFrye58sSNzuxRg5rbemy7SThVL3stqeNMHNYDlicfaqSRfNsrrcSyN2tLYtzRtDpED6eH5WAGjDfFJ2GY+Qu7nST44epO2RaPBAKlcoVFLE+y6PKmxmGyXzkTOnI+9MDAbo6HJQ/EGbjERMF4B9PmYYWMoxfgkP5Zj91uHSLogVl93Pd8VTuhwia3p7RVsfJ1OatXSjo3MErzwq2tdjfzHhcup3EcOUAQy38uCLrpqqJFLRkeiulWVGP4uojMzD7mxeyvW3JLzW8GtClMt6/PwIDAQAB";
 	// Prod app key
 	public static final String FAIRKET_APP_PUBLIC_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjtsuPFU4uiH+cz1ApG/2B44QG9eF0lo84g7imInDgo1WHESEXMiqkDZBmnVSx2sPz0tr4EeJSLCo9jbvZGIrtY+qCDbi/hmt32pP4JzEqkWn3rIoatQhSLOPGxNFmacjTmuj2pDDWE69bLQFy1nCDnxKk0Lij1hfPaXvWnmveZOcaFgCybQGV6mtI+NV8kOommqAFICXjrNKDKKyQM3GrZU4XWgC8ySmyXMQIfbMbI1JKZpIeleisBTFVlc270S2ZGlMRBByGjiD8OIAhxkVSS1AVoIHiqmTj6pXfOjMMjtf4BZVBQUEPxZWGj588HzwfskSO12kPwgHadUS6KNCJwIDAQAB";
 
@@ -94,8 +92,8 @@ public class MainActivity extends AbstractMainActivity implements
 			R.drawable.tux_29, R.drawable.tux_30, R.drawable.tux_31,
 			R.drawable.tux_32, R.drawable.tux_33 };
 
-	private static final int[][] icons_set = { tiles_default, tiles_christmas,
-			tiles_easter, tiles_tux };
+	private static final int[][] icons_set = { tiles_christmas, tiles_easter,
+			tiles_default, tiles_tux };
 
 	private static final int[] sounds = { R.raw.blop, R.raw.chime,
 			R.raw.chtoing, R.raw.tic, R.raw.toc, R.raw.toing, R.raw.toing2,
@@ -103,8 +101,8 @@ public class MainActivity extends AbstractMainActivity implements
 			R.raw.toong, R.raw.tzirlup, R.raw.whiipz };
 
 	private static final int[] not_found_tile_set = {
-			R.drawable.not_found_default, R.drawable.not_found_christmas,
-			R.drawable.not_found_easter, R.drawable.not_found_tux };
+			R.drawable.not_found_christmas, R.drawable.not_found_easter,
+			R.drawable.not_found_default, R.drawable.not_found_tux };
 	private Memory mMemory;
 	private MemoryGridView mGridView;
 	private FairketApiClient mFairketApiClient;

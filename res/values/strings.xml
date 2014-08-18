@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
+
     <string name="app_name">"Memory"</string>
     <string name="activity_title">"Memory Game For Kids"</string>
     <string name="success_title">"Great!"</string>
@@ -16,21 +17,17 @@
     <string name="first_run_dialog_message">Thanks for downloading Memory Game For Kids\n\n
     Quick start instructions :\n
     \t• Click on the tiles and find pairs.\n
-    \n\n Enjoy it!\n
-    </string>
+    \n\n Enjoy it!\n</string>
     <string name="whats_new_dialog_title">What\'s new in Memory Game For Kids</string>
-    <string name="whats_new_dialog_message">Thanks for upgrading Memory Game For Kids\n
-    <b>New in version 2.0:</b>\n
+    <string name="whats_new_dialog_message">Thanks for upgrading Memory Game For Kids\n <b>New in version 2.0:</b>\n
     \t• New theme selection on preferences screen.\n
     \t• New Tux theme.\n
     \t• French and Deutch translations.\n
     \t• Still no ads nor internet access required.\n
-    \n\nEnjoy it and don\'t forget to rate it to support.
-    </string>
+    \n\nEnjoy it and don\'t forget to rate it to support.</string>
     <string name="credits_menu">About</string>
     <string name="credits_app_name">Memory Game For Kids</string>
     <string name="credits_current_version">Version 2.0.1</string>
-    
     <string name="menu_preferences">Preferences</string>
     <string name="title_hiscore">HiScore</string>
     <string name="label_hiscore">Current HiScore : </string>
@@ -39,17 +36,21 @@
     <string name="message_effect_new_game">This option will take effect after selecting a new game</string>
     <string name="title_sound">Sounds</string>
     <string name="checkbox_sound">Enable sound</string>
-    
     <string name="prompt_themes">Choose your theme</string>
+
     <string-array name="array_themes">
-        <item>Default</item> 
-        <item>Season - Christmas</item> 
-        <item>Season - Easter</item> 
-        <item>Fun - Tux</item> 
+        <item>Season - Christmas</item>
+        <item>Season - Easter</item>
     </string-array>
-    
+    <string-array name="array_themes_premium">
+        <item>Season - Christmas</item>
+        <item>Season - Easter</item>
+        <item>Classic</item>
+        <item>Fun - Tux</item>
+    </string-array>
+
     <string name="title_support">Support</string>
     <string name="text_support">This application is free software, open source, free of ads, requires no permission, please support it by rating it on Google Play Store!</string>
     <string name="button_support">Rate the application</string>
-    
+
 </resources>

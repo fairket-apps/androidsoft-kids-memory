@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
+
     <string name="app_name">"Memory"</string>
     <string name="activity_title">"Memory Game For Kids"</string>
     <string name="success_title">"Prima!"</string>
@@ -16,20 +17,16 @@
     <string name="first_run_dialog_message">Danke, dass Du Memory Game For Kids heruntergeladen hast\n\n
     So geht\'s:\n
     \t• Klick auf die Teile und finde Paare.\n
-    \n\n Viel Spass!\n
-    </string>
+    \n\n Viel Spass!\n</string>
     <string name="whats_new_dialog_title">Was ist neu in Memory Game For Kids</string>
-    <string name="whats_new_dialog_message">Danke, dass Du eine neue Version von Memory Game For Kids installiert hast\n
-    <b>Neu in Version 2.0:</b>\n
+    <string name="whats_new_dialog_message">Danke, dass Du eine neue Version von Memory Game For Kids installiert hast\n <b>Neu in Version 2.0:</b>\n
     \t• Neuer Dialog zur Themenauswahl.\n
     \t• Neues Tux Thema.\n
     \t• Noch immer keine Werbung und kein Internetzugang notwendig.\n
-    \n\nViel Spass und vergiss nicht es zu bewerten.
-    </string>
+    \n\nViel Spass und vergiss nicht es zu bewerten.</string>
     <string name="credits_menu">Über</string>
     <string name="credits_app_name">Memory Game For Kids</string>
     <string name="credits_current_version">Version 2.0.1</string>
-
     <string name="menu_preferences">Einstellungen</string>
     <string name="title_hiscore">HiScore</string>
     <string name="label_hiscore">Aktueller HiScore : </string>
@@ -38,12 +35,16 @@
     <string name="message_effect_new_game">Diese Einstellung wird erst nach Starten eines neuen Spiels aktiv</string>
     <string name="title_sound">Sounds</string>
     <string name="checkbox_sound">Enable sound</string>
-
     <string name="prompt_themes">Wähle ein Thema</string>
+
     <string-array name="array_themes">
-        <item>Standard</item>
         <item>Jahreszeit - Weihnachten</item>
         <item>Jahreszeit - Ostern</item>
+    </string-array>
+    <string-array name="array_themes_premium">
+        <item>Jahreszeit - Weihnachten</item>
+        <item>Jahreszeit - Ostern</item>
+        <item>Classic</item>
         <item>Spass - Tux</item>
     </string-array>
 
