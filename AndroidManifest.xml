@@ -2,15 +2,26 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fairket.app.memory.kids"
     android:installLocation="auto"
-    android:versionCode="8"
-    android:versionName="1.0.3" >
+    android:versionCode="14"
+    android:versionName="1.1.2" >
 
     <uses-sdk
         android:minSdkVersion="9"
-        android:targetSdkVersion="19" />
+        android:targetSdkVersion="21" />
 
     <!-- GOOGLE IAP -->
     <uses-permission android:name="com.android.vending.BILLING" />
+
+    <!-- Required for auto fetching and filling configured emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- The optional GET_TASKS permission will allow you to see which activity was active when a crash occurs -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- Tapjoy Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:hardwareAccelerated="true"
@@ -34,6 +45,31 @@
             android:name="org.androidsoft.games.memory.kids.ui.PreferencesActivity"
             android:label="@string/activity_title" >
         </activity>
+        <!-- Tapjoy Activities -->
+        <activity
+            android:name="com.tapjoy.TJCOffersWebView"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.tapjoy.TapjoyFullScreenAdWebView"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.tapjoy.TapjoyVideoView"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.tapjoy.TJAdUnitView"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.tapjoy.mraid.view.ActionHandler"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity
+            android:name="com.tapjoy.mraid.view.Browser"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+
+        <meta-data
+            android:name="“com.google.android.gms.version”"
+            android:value="“@integer/google_play_services_version”" />
     </application>
 
 </manifest>

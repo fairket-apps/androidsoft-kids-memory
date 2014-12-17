@@ -26,6 +26,7 @@ import android.view.View;
 import com.fairket.app.memory.kids.R;
 import com.fairket.sdk.android.FairketApiClient;
 import com.fairket.sdk.android.FairketAppTimeHelper;
+import com.tapjoy.TapjoyConnect;
 
 /**
  * MainActivity
@@ -38,7 +39,8 @@ public class MainActivity extends AbstractMainActivity implements
 	public static final String FAIRKET_LOG_TAG = "FairketKidsMemory";
 
 	// Integ app key
-	//public static final String FAIRKET_APP_PUBLIC_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAssUd0bNodBrziReXb1J8djrsP6KCG2lxnnBZqgC38jrpnhHLsjxIvRE6/DpydwUyFrye58sSNzuxRg5rbemy7SThVL3stqeNMHNYDlicfaqSRfNsrrcSyN2tLYtzRtDpED6eH5WAGjDfFJ2GY+Qu7nST44epO2RaPBAKlcoVFLE+y6PKmxmGyXzkTOnI+9MDAbo6HJQ/EGbjERMF4B9PmYYWMoxfgkP5Zj91uHSLogVl93Pd8VTuhwia3p7RVsfJ1OatXSjo3MErzwq2tdjfzHhcup3EcOUAQy38uCLrpqqJFLRkeiulWVGP4uojMzD7mxeyvW3JLzW8GtClMt6/PwIDAQAB";
+	// public static final String FAIRKET_APP_PUBLIC_KEY =
+	// "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAssUd0bNodBrziReXb1J8djrsP6KCG2lxnnBZqgC38jrpnhHLsjxIvRE6/DpydwUyFrye58sSNzuxRg5rbemy7SThVL3stqeNMHNYDlicfaqSRfNsrrcSyN2tLYtzRtDpED6eH5WAGjDfFJ2GY+Qu7nST44epO2RaPBAKlcoVFLE+y6PKmxmGyXzkTOnI+9MDAbo6HJQ/EGbjERMF4B9PmYYWMoxfgkP5Zj91uHSLogVl93Pd8VTuhwia3p7RVsfJ1OatXSjo3MErzwq2tdjfzHhcup3EcOUAQy38uCLrpqqJFLRkeiulWVGP4uojMzD7mxeyvW3JLzW8GtClMt6/PwIDAQAB";
 	// Prod app key
 	public static final String FAIRKET_APP_PUBLIC_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjtsuPFU4uiH+cz1ApG/2B44QG9eF0lo84g7imInDgo1WHESEXMiqkDZBmnVSx2sPz0tr4EeJSLCo9jbvZGIrtY+qCDbi/hmt32pP4JzEqkWn3rIoatQhSLOPGxNFmacjTmuj2pDDWE69bLQFy1nCDnxKk0Lij1hfPaXvWnmveZOcaFgCybQGV6mtI+NV8kOommqAFICXjrNKDKKyQM3GrZU4XWgC8ySmyXMQIfbMbI1JKZpIeleisBTFVlc270S2ZGlMRBByGjiD8OIAhxkVSS1AVoIHiqmTj6pXfOjMMjtf4BZVBQUEPxZWGj588HzwfskSO12kPwgHadUS6KNCJwIDAQAB";
 
@@ -118,6 +120,12 @@ public class MainActivity extends AbstractMainActivity implements
 
 		mFairketApiClient = FairketAppTimeHelper.onCreate(this,
 				FAIRKET_APP_PUBLIC_KEY, FAIRKET_LOG_TAG);
+
+		// Tapjoy connect
+		String tapjoyAppID = "4b89b507-7889-41a1-b512-16e6181030c0";
+		String tapjoySecretKey = "wQO8ZQSjeCX8r6WtM0B8";
+		TapjoyConnect.requestTapjoyConnect(this, tapjoyAppID, tapjoySecretKey);
+
 	}
 
 	/**

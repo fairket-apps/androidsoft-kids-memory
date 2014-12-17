@@ -290,8 +290,7 @@ public class PreferencesActivity extends BasicActivity implements
 
 	private void showPaidOptions() {
 
-		String options[] = { "Usage Pricing By Fairket",
-				"Outright Purchase By Google" };
+		String options[] = { "Rent from Fairket", "Buy from Google" };
 		AlertDialog dialog = new AlertDialog.Builder(this).setTitle("Choose")
 				.setItems(options, new DialogInterface.OnClickListener() {
 					public void onClick(DialogInterface dialog, int which) {
